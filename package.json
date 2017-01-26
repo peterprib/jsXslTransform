@@ -16,7 +16,7 @@
   {"start": "node server.js"
   ,"test": "./node_modules/.bin/mocha -R xunit  --reporter-options output=tests/TEST-1.xml"
   }
-,"dependencies": {"DocumentLoader": "https://github.com/peterprib/DocumentLoader.git"}
+,"dependencies": {"JSLoaderDocument": "https://github.com/peterprib/JSLoaderDocument.git"}
 ,"devDependencies": 
     {"mocha": "*"
     ,"chai": "*"
