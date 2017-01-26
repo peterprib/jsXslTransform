@@ -11,6 +11,7 @@
 ,"bugs": "https://github.com/peterprib/jsXslTransform/issues"
 ,"license": "GPL-3.0"
 ,"bin": {"XslTransform": "./XslTransform.js"}
+,"config" : {"port" : "3000"}
 ,"scripts":
   {"start": "node server.js",
   ,"test": "./node_modules/.bin/mocha -R xunit  --reporter-options output=tests/TEST-1.xml"
