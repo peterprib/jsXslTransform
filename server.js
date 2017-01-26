@@ -1,4 +1,4 @@
-console.log('Starting');
+console.log('Starting jsXslTransform');
 const url = require('url')
 	, path = require('path')
 	, fs=require('fs');
@@ -75,12 +75,12 @@ var fileExtensions = {
 	};
 app.all('/transformSelectList', function (req, res, next) {
 		var list=""
-			,l=fileExtensions.listRecursiveSync(path.join(__dirname,"public","xslt"));
+			,l=fileExtensions.listRecursiveSync(path.join(__dirname,"public","xsl"));
 		l.forEach(function(c) {
 		    	list += "<option value=\""+c+"\">"+c+"</option>";
 		  	}, this);
 		res.send("<select>"+list+"</select>"); 
 	});
 http.createServer(app).listen(app.get('port'), function(){
-		console.log('Express server listening on port ' + app.get('port'));
+		console.log('jsXslTransform express server listening on port ' + app.get('port'));
 	});
