@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transform XML</title>
+	<script data-main="js/requireMain" src="requirejs/require.js"></script>
+</head>
+<script>
+function transformXML(xslt,in,out) { 
+	var aTransform=new XslTransform();
+	document.getElementById(out).value="loading";
+	aTransform.initialise(document.getElementById(xslt).value,document.getElementById(in).value
+    ,function() {document.getElementById(out).value = this.getText();}  
+    ,atransform);
+}
+</script>
+<body>
+<h1>Convert</h1>
+<h2>XSL</h2>
+<div class="DataLoader" data-source="transformSelectList"></div>
+<h2>XML</h2>
+<form onSubmit="JavaScript:transformXML('xslt','inXML','outArea',)">>
+	<textarea id="inXml" rows="20" cols="100"></textarea>
+	<input type="submit" value="Submit">
+</form> 
+<h2>Transformed</h2>
+<textarea id="outArea" rows="20" cols="100"></textarea>
+</body>
+</html>
