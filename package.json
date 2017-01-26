@@ -11,12 +11,15 @@
   ]
 ,"author": "Peter Prib"
 ,"bugs": "https://github.com/peterprib/jsXslTransform/issues"
-, "license": "GPL-3.0"
-, "bin": {
+,"license": "GPL-3.0"
+,"bin": {
     "XslTransform": "./XslTransform.js"
   }
-,  "scripts": {
+, "scripts": {
     "test": "./node_modules/.bin/mocha -R xunit  --reporter-options output=tests/TEST-1.xml"
+  }
+,"dependencies": {
+    "DocumentLoader": "https://github.com/peterprib/DocumentLoader.git"
   }
 ,"devDependencies": {
     "mocha": "*"
