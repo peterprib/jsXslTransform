@@ -2,4 +2,24 @@
 , "description": "XSL transform management in browser javascript"
 ,"version": "0.0.1"
 ,"main": "XslTransform.js"
+,"repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/peterprib/jsXslTransform.git"
+  }
+ ,"keywords": [
+    "javascript"
+  ]
+,"author": "Peter Prib"
+,"bugs": "https://github.com/peterprib/jsXslTransform/issues"
+, "license": "GPL-3.0"
+, "bin": {
+    "XslTransform": "./XslTransform.js"
+  }
+,  "scripts": {
+    "test": "./node_modules/.bin/mocha -R xunit  --reporter-options output=tests/TEST-1.xml"
+  }
+,"devDependencies": {
+    "mocha": "*"
+    ,"chai": "*"
+  }
 }
