@@ -6,7 +6,7 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , app = express();
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || process.env.npm_package_config_port || 3000);
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
